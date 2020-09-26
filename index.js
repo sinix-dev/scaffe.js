@@ -8,6 +8,7 @@ ncp.limit = 16
 
 const eval = (filepath, newpath, values) => {
   const filename = path.basename(filepath)
+
   if(filename[0] == "_"){
     const content = fs.readFileSync(filepath)
 
@@ -31,20 +32,19 @@ const generate = (templateDir, outDir, values, cb) => {
 
     outDir = path.resolve(outDir)
 
-    process.chdir(templateDir)
-
-    glob("./**/*", (err, res) => {
+    glob("**/*", { cwd: templateDir }, (err, res) => {
       if (err) return cb(err)
 
       for(file of res){
-        newpath = path.join(outDir, file)
+        const filepath = path.join(templateDir, file)
 
+        newpath = path.join(outDir, file)
         dirname = path.dirname(newpath)
 
         fs.mkdirSync(dirname, { recursive: true })
 
-        if(eval(file, newpath, values)){
-          ncp(file, newpath, (err) => {
+        if(eval(filepath, newpath, values)){
+          ncp(filepath, newpath, (err) => {
             if (err) return cb(err)
           })
         }
