@@ -1,0 +1,28 @@
+{
+  "name": "scaffe",
+  "version": "0.1.0",
+  "description": "A Scaffolding Utility",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sinix-dev/scaffe.js.git"
+  },
+  "keywords": [
+    "sinix",
+    "scaffold"
+  ],
+  "author": "Sanket Chaudhari",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/sinix-dev/scaffe.js/issues"
+  },
+  "homepage": "https://github.com/sinix-dev/scaffe.js#readme",
+  "dependencies": {
+    "ejs": "^3.1.5",
+    "glob": "^7.1.6",
+    "ncp": "^2.0.0"
+  }
+}
