@@ -13,7 +13,7 @@ const scaffe = require("scaffe")
 
 ...
 
-scaffe.generate(template_dir, outDir, { name: outDir }, (err) => {
+scaffe.generate(template_dir, outDir, { name: appName }, (err) => {
   if(err){
     console.error(err)
   } else {
