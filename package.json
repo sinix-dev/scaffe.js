@@ -19,7 +19,6 @@
   "homepage": "https://github.com/sinix-dev/scaffe.js#readme",
   "dependencies": {
     "ejs": "^3.1.5",
-    "glob": "^7.1.6",
-    "ncp": "^2.0.0"
+    "glob": "^7.1.6"
   }
 }
