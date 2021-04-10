@@ -64,4 +64,4 @@ So we can use variables in our template files in [ejs](https://ejs.co/) format.
 ```
 
 `variables` in 3rd argument (i.e. config) will contain all variable values that
-needs to be passed on to be processed by [ejs](https://ejs.co/).
+need to be passed on to be processed by [ejs](https://ejs.co/).
