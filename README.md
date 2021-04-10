@@ -51,7 +51,7 @@ following in order.
 - `starts with _`: this file will be evaluated as an ejs file <br>
 - `doesn't starts with _`: this type of files will be copied as it is to the output directory.
 
-So we can uses variables in our template files in [ejs](https://ejs.co/) format.
+So we can use variables in our template files in [ejs](https://ejs.co/) format.
 
 **A use case,**
 
