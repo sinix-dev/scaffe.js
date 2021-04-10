@@ -26,25 +26,29 @@ async function build(){
   scaffe.generate(templateDir, outDir, { overwrite: true, variables: { name: "app" }).catch((err) => {
     console.log(err);
   })
+  
+  scaffe.generate(templateDir, outDir, variables, (err) => {
+    console.log(err);
+  })
 }
 ```
 
-### Information
+### More Info
 
 The only available function in Scaffe is `generate` which takes arguments as
 following in order.
 
-`templateDir`: It's the path to the template directory. <br>
-`outDir`: The output directory <br>
-`config`: An Object with two props `{boolean} overwrite (by default false)`, `{object} variables` <br>
+- `templateDir`: It's the path to the template directory. <br>
+- `outDir`: The output directory <br>
+- `config`: An Object with two props `{boolean} overwrite (by default false)`, `{object} variables` <br>
 
-Template directory can have two types of files <br>
-`starts with _`: this file will be evaluated as an ejs file <br>
-`doesn't starts with _`: this type of files will be copied as it is to the output directory.
+**Template directory can have two types of files** <br>
+- `starts with _`: this file will be evaluated as an ejs file <br>
+- `doesn't starts with _`: this type of files will be copied as it is to the output directory.
 
 So we can uses variables in our template files in [ejs](https://ejs.co/) format.
 
-A use case,
+**A use case,**
 
 ```javascript
 // _package.json
