@@ -1,4 +1,5 @@
-# scaffe.js
+<img src="https://raw.githubusercontent.com/sinix-dev/scaffe.js/feat/release-changes/.github/assets/scaffe-logo.png" width="400">
+<hr>
 
 [![Tests workflow](https://github.com/sinix-dev/scaffe.js/actions/workflows/test.js.yml/badge.svg)](https://github.com/sinix-dev/scaffe.js/actions/workflows/test.js.yml)
 [![](https://img.shields.io/npm/v/tauri.svg)](https://www.npmjs.com/package/scaffe)
