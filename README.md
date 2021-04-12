@@ -2,7 +2,7 @@
 <hr>
 
 [![Tests workflow](https://github.com/sinix-dev/scaffe.js/actions/workflows/test.js.yml/badge.svg)](https://github.com/sinix-dev/scaffe.js/actions/workflows/test.js.yml)
-[![](https://img.shields.io/npm/v/tauri.svg)](https://www.npmjs.com/package/scaffe)
+[![](https://img.shields.io/npm/v/scaffe.svg)](https://www.npmjs.com/package/scaffe)
 [![](https://img.shields.io/npm/l/scaffe)](https://github.com/sinix-dev/scaffe.js/blob/master/LICENSE)
 
 Simple scaffolding utility, inspired by [Sao.js](https://github.com/saojs/sao)
