@@ -34,5 +34,15 @@ module.exports = {
     "es2021": true,
     "browser": true,
   },
-  "extends": "eslint:recommended"
+  "extends": "eslint:recommended",
+  "overrides": [
+    {
+      "files": [
+        "**/*.test.js",
+      ],
+      "env": {
+        "jest": true
+      }
+    }
+  ]
 }
