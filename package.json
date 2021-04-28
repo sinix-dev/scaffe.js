@@ -24,7 +24,7 @@
   "homepage": "https://github.com/sinix-dev/scaffe.js#readme",
   "dependencies": {
     "ejs": "^3.1.5",
-    "glob": "^7.1.6"
+    "fast-glob": "^3.2.5"
   },
   "devDependencies": {
     "eslint": "^7.25.0",

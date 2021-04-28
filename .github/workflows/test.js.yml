@@ -10,15 +10,14 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
+  jest-test:
     strategy:
       matrix:
         node-version: [10.x, 12.x, 14.x, 15.x]
+        platform: [macos-latest, ubuntu-latest, windows-latest]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
+    runs-on: ${{ matrix.platform }}
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -27,4 +26,3 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: yarn
     - run: yarn test
-    - run: yarn lint
