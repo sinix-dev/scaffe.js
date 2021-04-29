@@ -24,11 +24,11 @@ async function main(){
   const s = scaffe.generate(templateDir, outDir, { overwrite: true, variables: { name: "app" } })
 
   // add a file from outside the templateDir
-  // he source path should be relative to templateDir
+  // the source path should be relative to templateDir
   s.add("../common/logo.png", "assets/logo.png")
 
   // add multiple files using glob pattern to the target project directory
-  // he source path should be relative to templateDir
+  // the source path should be relative to templateDir
   s.add("../common/styles/*.scss", "static/css/")
 
   // ignore certain files
