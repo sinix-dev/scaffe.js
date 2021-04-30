@@ -1,5 +1,4 @@
-<img src="https://raw.githubusercontent.com/sinix-dev/scaffe.js/feat/release-changes/.github/assets/scaffe-logo.png" width="400">
-<hr>
+<img src="https://raw.githubusercontent.com/sinix-dev/scaffe.js/master/.github/assets/scaffe-logo.png" width="400">
 
 [![Tests workflow](https://github.com/sinix-dev/scaffe.js/actions/workflows/test.js.yml/badge.svg)](https://github.com/sinix-dev/scaffe.js/actions/workflows/test.js.yml)
 [![](https://img.shields.io/npm/v/scaffe.svg)](https://www.npmjs.com/package/scaffe)
@@ -18,34 +17,33 @@ $ npm install scaffe # yarn add scaffe
 ```js
 const scaffe = require("scaffe")
 
-async function build(){
+async function main(){
   ...
+
+  // create a generator instance
+  const s = scaffe.generate(templateDir, outDir, { overwrite: true, variables: { name: "app" } })
+
+  // add a file from outside the templateDir
+  // the source path should be relative to templateDir
+  s.add("../common/logo.png", "assets/logo.png")
+
+  // add multiple files using glob pattern to the target project directory
+  // the source path should be relative to templateDir
+  s.add("../common/styles/*.scss", "static/css/")
+
+  // ignore certain files
+  s.ignore("docs/**/*.scss")
+
+  // ignore certain folder
+  s.ignore("build/**/*")
+
   try {
-    await scaffe.generate(templateDir, outDir, { overwrite: true, variables: { name: "app" } });
+    await s;
   } catch(err) {
     console.log(err)
   }
-
-  // OR
-
-  scaffe.generate(templateDir, outDir, { overwrite: true, variables: { name: "app" }).catch((err) => {
-    console.log(err);
-  })
-  
-  scaffe.generate(templateDir, outDir, variables, (err) => {
-    console.log(err);
-  })
 }
 ```
-
-### More Info
-
-The only available function in Scaffe is `generate` which takes arguments as
-following in order.
-
-- `templateDir`: It's the path to the template directory. <br>
-- `outDir`: The output directory <br>
-- `config`: An Object with two props `{boolean} overwrite (by default false)`, `{object} variables` <br>
 
 **Template directory can have two types of files** <br>
 - `starts with _`: this file will be evaluated as an ejs file <br>
