@@ -1,0 +1,21 @@
+{
+  "gitSiteUrl": "https://github.com/sinix-dev/scaffe.js/",
+  "pkgManagers": {
+    "javascript": {
+      "version": true,
+      "getPublishedVersion": "npm view ${ pkg.pkg } version",
+      "publish": [
+        {
+          "command": "npm publish --access public",
+          "dryRunCommand": "echo publish here"
+        }
+      ]
+    }
+  },
+  "packages": {
+    "scaffe": {
+      "path": ".",
+      "manager": "javascript"
+    }
+  }
+}
